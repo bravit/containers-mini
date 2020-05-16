@@ -6,7 +6,7 @@ build-type:          Simple
 library
   exposed-modules:     Data.Stack, Data.Deque, Data.Queue
   other-extensions:    NoImplicitPrelude
-  build-depends:       base >=4.13 && <4.14, containers >=0.6 && <0.7
+  build-depends:       base >=4.10 && <4.15, containers >=0.5 && <0.7
   default-language:    Haskell2010
 
 test-suite stack
@@ -14,7 +14,7 @@ test-suite stack
   main-is: TestStack.hs
   other-modules: Data.Stack
   build-depends:
-      base >=4.13 && <4.14, containers >=0.6 && <0.7
+      base >=4.10 && <4.15, containers >=0.5 && <0.7
   default-language: Haskell2010
 
 test-suite queue
@@ -22,7 +22,7 @@ test-suite queue
   main-is: TestQueue.hs
   other-modules: Data.Queue, Data.Deque
   build-depends:
-      base >=4.13 && <4.14, containers >=0.6 && <0.7
+      base >=4.10 && <4.15, containers >=0.5 && <0.7
   default-language: Haskell2010
 
 benchmark bench
@@ -30,7 +30,7 @@ benchmark bench
   main-is: Bench.hs
   other-modules: Data.Stack, Data.Deque
   build-depends:
-      base >=4.13 && <4.14,
-      containers >=0.6 && <0.7,
+      base >=4.10 && <4.15,
+      containers >=0.5 && <0.7,
       timeit >=2.0 && <2.1
   default-language: Haskell2010
