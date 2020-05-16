@@ -1,0 +1,36 @@
+cabal-version:       2.0
+name:                containers-mini
+version:             0.1.0.0
+build-type:          Simple
+
+library
+  exposed-modules:     Data.Stack, Data.Deque, Data.Queue
+  other-extensions:    NoImplicitPrelude
+  build-depends:       base >=4.13 && <4.14, containers >=0.6 && <0.7
+  default-language:    Haskell2010
+
+test-suite stack
+  type: exitcode-stdio-1.0
+  main-is: TestStack.hs
+  other-modules: Data.Stack
+  build-depends:
+      base >=4.13 && <4.14, containers >=0.6 && <0.7
+  default-language: Haskell2010
+
+test-suite queue
+  type: exitcode-stdio-1.0
+  main-is: TestQueue.hs
+  other-modules: Data.Queue, Data.Deque
+  build-depends:
+      base >=4.13 && <4.14, containers >=0.6 && <0.7
+  default-language: Haskell2010
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules: Data.Stack, Data.Deque
+  build-depends:
+      base >=4.13 && <4.14,
+      containers >=0.6 && <0.7,
+      timeit >=2.0 && <2.1
+  default-language: Haskell2010
